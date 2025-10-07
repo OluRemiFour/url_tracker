@@ -83,7 +83,7 @@ router.get("/:shortId", async (req, res) => {
   }
 });
 
-// Get Analytics Reports
+// Get Analytics Reports.
 router.get("/anlytics/:shortId", async (req, res) => {
   const url = await Url.findOne({ shortId: req.params.shortId });
   res.status(200).json({
