@@ -1,41 +1,58 @@
+// {
+//   "compilerOptions": {
+//     // File Layout
+//     "rootDir": "./src",
+//     "outDir": "./dist",
+
+//     // Environment Settings
+//     "module": "nodenext",
+//     "target": "esnext",
+//     "moduleResolution": "nodenext",
+//     "types": ["node", "express", "mongoose", "nanoid", "geoip-lite"],
+//     "lib": ["esnext"],
+
+//     // Other Outputs
+//     "sourceMap": true,
+//     "declaration": true,
+//     "declarationMap": true,
+
+//     // Stricter Typechecking Options
+//     "noUncheckedIndexedAccess": true,
+//     "exactOptionalPropertyTypes": true,
+
+//     // Recommended Options
+//     "strict": true,
+//     "verbatimModuleSyntax": true,
+//     "isolatedModules": true,
+//     "noUncheckedSideEffectImports": true,
+//     "moduleDetection": "force",
+//     "skipLibCheck": true,
+
+//     // Allow importing .ts extensions
+//     "noEmit": true,
+//     "allowImportingTsExtensions": true
+//   },
+//   "ts-node": {
+//     "esm": true,
+//     "experimentalResolver": true
+//   },
+//   "include": ["src/**/*", "src/server", "src/app.ts"],
+//   "exclude": ["node_modules", "dist"]
+// }
+
 {
   "compilerOptions": {
-    // File Layout
+    "target": "ES2022",
+    "module": "CommonJS",
     "rootDir": "./src",
     "outDir": "./dist",
-
-    // Environment Settings
-    "module": "nodenext",
-    "target": "esnext",
-    "moduleResolution": "nodenext",
-    "types": ["node", "express", "mongoose", "nanoid", "geoip-lite"],
-    "lib": ["esnext"],
-
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    // Recommended Options
     "strict": true,
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
+    "esModuleInterop": true,
     "skipLibCheck": true,
-
-    // Allow importing .ts extensions
-    "noEmit": true,
-    "allowImportingTsExtensions": true
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true
   },
-  "ts-node": {
-    "esm": true,
-    "experimentalResolver": true
-  },
-  "include": ["src/**/*", "src/server", "src/app.ts"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }

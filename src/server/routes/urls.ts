@@ -1,6 +1,6 @@
 import express from "express";
 import { nanoid } from "nanoid";
-import Url from "../model/Url.ts";
+import Url from "../model/Url";
 import geoip from "geoip-lite";
 
 const router = express.Router();
