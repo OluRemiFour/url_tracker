@@ -1,8 +1,8 @@
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
-import urls from "./server/routes/urls.ts"; // Remove .ts extension
-import { connectDB } from "./server/db/database.ts"; // Remove .ts extension
+import urls from "./routes/urls.ts"; // Remove .ts extension
+import { connectDB } from "./db/database.ts"; // Remove .ts extension
 
 dotenv.config();
 const app = express();

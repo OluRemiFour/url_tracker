@@ -42,6 +42,6 @@
     "esm": true,
     "experimentalResolver": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/server"],
   "exclude": ["node_modules", "dist"]
 }
