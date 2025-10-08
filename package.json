@@ -11,11 +11,10 @@
   "name": "url_tracker",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/app.js",
-    "start:dev": "nodemon --exec node --loader ts-node/esm src/app.ts",
+    "start:dev": "nodemon --exec ts-node src/app.ts",
     "build": "tsc"
   },
   "keywords": [],
