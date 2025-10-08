@@ -59,13 +59,13 @@ router.get("/:shortId", async (req, res) => {
     // get location from location api
     const ip = req.ip || "";
     const geo = geoip.lookup(ip);
-    const location = geo ? `${geo.city}, ${geo.country}` : "unknown";
+    const loc = geo ? `${geo.city}, ${geo.country}` : "unknown";
 
     url.clicks++;
     url.logs.push({
       ip: req.ip,
       userAgent: req.headers["user-agent"],
-      location: req.headers["location"] || location || "unknown",
+      location: req.headers["location"] || loc,
       timestamp: Date.now(),
       // pages: '',
       // session: req.headers
