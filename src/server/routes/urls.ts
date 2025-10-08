@@ -36,7 +36,8 @@ router.post("/shorten", async (req, res) => {
 });
 
 // Redirect and track
-router.get("/your_url_tracker/:shortId", async (req, res) => {
+// router.get("/your_url_tracker/:shortId", async (req, res) => {
+router.get("/:shortId", async (req, res) => {
   if (!req.params) {
     return res.status(400).json({
       status: "Failed",
