@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   return res.status(200).json({
-    status: 'Success',
+    status: "Success",
     statusCode: "00",
     message: "Welcome to your url page",
   });
@@ -26,9 +26,9 @@ router.post("/shorten", async (req, res) => {
   const shortId = nanoid(6);
 
   const newUrl = await Url.create({ originalUrl, shortId });
-  
+
   return res.json({
-    status: 'Success',
+    status: "Success",
     statusCode: "00",
     message: "Url created successfully",
     shortUrl: `${process.env.BASE_URL}/${shortId}`,
@@ -36,7 +36,7 @@ router.post("/shorten", async (req, res) => {
 });
 
 // Redirect and track
-router.get("/:shortId", async (req, res) => {
+router.get("/your_url_tracker/:shortId", async (req, res) => {
   if (!req.params) {
     return res.status(400).json({
       status: "Failed",
@@ -47,7 +47,7 @@ router.get("/:shortId", async (req, res) => {
   try {
     const { shortId } = req.params;
     const url = await Url.findOne({ shortId });
-
+    console.log(url);
     if (!url)
       return res.json({
         statusCode: "01",
@@ -70,8 +70,7 @@ router.get("/:shortId", async (req, res) => {
       // session: req.headers
     });
     await url.save();
-
-    // Redirect to the original url
+    console.log(url, 2);
     res.redirect(url.originalUrl);
   } catch (error) {
     console.error("Redirect error:", error);

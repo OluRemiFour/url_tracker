@@ -8,13 +8,7 @@
     "module": "nodenext",
     "target": "esnext",
     "moduleResolution": "nodenext",
-    "types": [
-      "node",
-      "express",
-      "mongoose",
-      "nanoid",
-      "geoip-lite"
-    ],
+    "types": ["node", "express", "mongoose", "nanoid", "geoip-lite"],
     "lib": ["esnext"],
 
     // Other Outputs
@@ -42,6 +36,6 @@
     "esm": true,
     "experimentalResolver": true
   },
-  "include": ["src/**/*", "src/server"],
+  "include": ["src/**/*", "src/server", "src/app.ts"],
   "exclude": ["node_modules", "dist"]
 }
